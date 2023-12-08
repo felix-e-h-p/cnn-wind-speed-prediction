@@ -13,6 +13,7 @@
 #     1. Import the necessary modules: matplotlib.pyplot and pandas.
 #     2. Use visualize_lead_time to obtain a DataFrame for the desired lead time.
 #     3. Call plot_wind_intensity to visualize wind intensities on scatter plots.
+#     4. Call visualize_and_save_results to export sufficiently.
 
 # Example:
 #     # Visualize wind forecast data
