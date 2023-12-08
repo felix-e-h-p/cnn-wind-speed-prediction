@@ -1,4 +1,4 @@
-# Wind Forecasting with CNN
+# Convolutional Neural Network (CNN) for Wind Speed Forecasting
 
 This repository contains scripts and files for wind speed forecasting using a Convolutional Neural Network (CNN). The CNN model is trained on GRIB data and can generate iterative wind speed predictions.
 
@@ -12,11 +12,11 @@ The training script ([`train.py`](train.py)) processes GRIB data, splits it into
 
 ### Configuration
 
-Before training, make sure to configure the necessary parameters in [`train_config.py`](train_config.py), such as the path to the GRIB file (`GRIB_FILE`), lead time (`LEAD_TIME`), and batch size (`BATCH_SIZE`).
+Before training, configure the necessary parameters in [`train_config.py`](train_config.py), such as the path to the GRIB file (`GRIB_FILE`), lead time (`LEAD_TIME`), and batch size (`BATCH_SIZE`).
 
 ## Inference
 
-The inference script ([`infer.py`](infer.py)) loads the trained model and performs wind forecasting on test data. The predictions are visualized and saved as intensity plots in the specified output directory (`OUT_DIR` in [`train_config.py`](train_config.py)).
+The inference script ([`infer.py`](infer.py)) loads the trained model and performs wind forecasting on specified designated test data. The predictions are visualized and saved as intensity plots in the specified output directory (`OUT_DIR` in [`train_config.py`](train_config.py)).
 
 ## Directory Structure
 
