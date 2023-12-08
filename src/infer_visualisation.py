@@ -7,6 +7,7 @@
 # Functions:
 #     - visualize_lead_time: Extract and structure wind forecast data for a specific lead time.
 #     - plot_wind_intensity: Plot wind intensity for a specific lead time and wind component.
+#     - visualize_and_save_results: Saves intensity plots of wind intensity value components.
 
 # Usage:
 #     1. Import the necessary modules: matplotlib.pyplot and pandas.
