@@ -32,3 +32,8 @@ The inference script ([`infer.py`](infer.py)) loads the trained model and perfor
 1. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
+
+2. **Execute Containerised:**
+   ```bash
+   CMD ["sh", "-c", "python train.py && python infer.py"]
+ 
