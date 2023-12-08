@@ -77,3 +77,24 @@ def plot_wind_intensity(fc_iter_at_lead_time, variable, lead_time_to_visualize, 
             print(f"File '{save_path}' already exists. Skipping save.")
     else:
         plt.show()
+
+def visualize_and_save_results(predictions, lead_time, out_dir):
+    """
+    Visualize and save wind intensity results.
+
+    Args:
+        predictions (xarray.Dataset): Iterative wind predictions dataset.
+        lead_time (int): Lead time for visualization.
+        out_dir (str): Output directory for saving plots.
+
+    Returns:
+        None
+    """
+    predictions_df = visualize_lead_time(predictions, lead_time)
+    predictions_df['latitude'] = predictions_df['coordinates'].apply(lambda x: x[0])
+    predictions_df['longitude'] = predictions_df['coordinates'].apply(lambda x: x[1])
+
+    os.makedirs(out_dir, exist_ok=True)
+
+    plot_wind_intensity(predictions_df, 'U-component-wind', lead_time, save_path=os.path.join(out_dir, 'wind_intensity_U.png'))
+    plot_wind_intensity(predictions_df, 'V-component-wind', lead_time, save_path=os.path.join(out_dir, 'wind_intensity_V.png'))
