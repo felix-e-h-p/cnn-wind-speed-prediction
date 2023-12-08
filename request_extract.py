@@ -1,5 +1,6 @@
 # API Request for extracting time domain values of wind speed U and V components
-# Not to be considered with UK specific coordinates - Use pre-uploaded datasets
+
+# Considered with UK specific coordinates only - alternatively use pre-uploaded GRIB dataset
 
 import cdsapi
 import logging
