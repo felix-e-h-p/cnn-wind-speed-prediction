@@ -2,7 +2,7 @@
 
 # Perform wind forecasting using a trained Convolutional Neural Network (CNN) model.
 
-# Execute this script with: $ python inference.py
+# Execute this script with: $ python infer.py
 
 # Requirements:
 # - NumPy (numpy)
